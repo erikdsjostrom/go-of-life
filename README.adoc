@@ -12,9 +12,7 @@ and supports the following mechanics:
 That's it, if decide to test it out remember to make your terminal text smaller
 so the whole board can be shown.
 
-[Caution]
-====
+=== Caution
 The board size is
 hard coded to 100x100 cells so if you try to click outside
 of this invisible boundary it will crash.
-====
