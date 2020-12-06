@@ -10,7 +10,6 @@ const cellHeight = 2
 type Cell struct {
 	*tl.Rectangle
 	alive bool
-	game  *tl.Game
 }
 
 type GameOfLife struct {
@@ -114,52 +113,15 @@ func main() {
 		Ch: ' ',
 	})
 
-	// cell1 := Cell{tl.NewRectangle(20, 20, cellWidth, cellHeight, tl.ColorRed), true}
-	// cell2 := Cell{tl.NewRectangle(20, 22, cellWidth, cellHeight, tl.ColorRed), true}
-	// cell3 := Cell{tl.NewRectangle(20, 24, cellWidth, cellHeight, tl.ColorRed), true}
-
-	// cell4 := Cell{tl.NewRectangle(15, 22, cellWidth, cellHeight, tl.ColorRed), false}
-	// cell5 := Cell{tl.NewRectangle(25, 22, cellWidth, cellHeight, tl.ColorRed), false}
-
-	// board.board[4][10] = true
-	// board.board[4][11] = true
-	// board.board[4][12] = true
-
-	// board.board[7][10] = true
-	// board.board[8][10] = true
-	// board.board[9][10] = true
-	// board.board[9][9] = true
-	// board.board[7][8] = true
-
-	// level.AddEntity(&cell1)
-	// level.AddEntity(&cell2)
-	// level.AddEntity(&cell3)
-	// level.AddEntity(&cell4)
-	// level.AddEntity(&cell5)
 	level.AddEntity(&board)
 
 	for x, yArr := range board.board {
 		for y, alive := range yArr {
-			level.AddEntity(&Cell{tl.NewRectangle(x*cell_width, y*cell_height, cellWidth, cellHeight, tl.ColorRed), alive, game})
+			level.AddEntity(&Cell{tl.NewRectangle(x*cell_width, y*cell_height, cellWidth, cellHeight, tl.ColorRed), alive})
 		}
 	}
 
 	game.Screen().SetLevel(level)
 
 	game.Start()
-	// fmt.Println("============================")
-	// fmt.Println(board.board[3][10], board.board[4][10], board.board[5][10])
-	// fmt.Println(board.board[3][11], board.board[4][11], board.board[5][11])
-	// fmt.Println(board.board[3][12], board.board[4][12], board.board[5][12])
-	// fmt.Println("============================")
-	// board.iterate()
-	// fmt.Println(board.board[3][10], board.board[4][10], board.board[5][10])
-	// fmt.Println(board.board[3][11], board.board[4][11], board.board[5][11])
-	// fmt.Println(board.board[3][12], board.board[4][12], board.board[5][12])
-	// fmt.Println("============================")
-	// board.iterate()
-	// fmt.Println(board.board[3][10], board.board[4][10], board.board[5][10])
-	// fmt.Println(board.board[3][11], board.board[4][11], board.board[5][11])
-	// fmt.Println(board.board[3][12], board.board[4][12], board.board[5][12])
-	// fmt.Println("============================")
 }
