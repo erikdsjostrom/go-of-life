@@ -1,0 +1,20 @@
+= Game of life in GO
+
+Nothing fancy, just a simple implementation that I built
+because I wanted to play around in go. It simulates the
+game of life on a torus (meaning the edges wrap around)
+and supports the following mechanics:
+
+* Space to pause
+* Enter to un-pause
+* Using the mouse to add new cells, single click or click and drag
+
+That's it, if decide to test it out remember to make your terminal text smaller
+so the whole board can be shown.
+
+[Caution]
+====
+The board size is
+hard coded to 100x100 cells so if you try to click outside
+of this invisible boundary it will crash.
+====
